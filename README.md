@@ -5,6 +5,36 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+class CampoDeBusca extends React.Component{
+
+    // inicializando objeto "state" para armazenar os valores da propriedade "entry" do componente.
+    state = {entry: ''}
+    // esse metodo é chamado sempre que ouver uma alteração no input 
+pegaAlteracaoNoElemento(event){
+    console.log(event.target.value);
+}
+
+    render(){
+        return(
+            <div className='ui segment'>
+                {/* ClassName adicionado ao fomulário */}
+                <form className='ui form'>
+                    <div className='field'>
+                        <div className='ui massive icon input'>
+
+                            {/* referencia ao objeto evento */}
+                            <input type="text" placeholder='pesquisa...' onChange={(event)=>console.log(event.target.value)}/>
+                            
+                            <i className='search icon'></i>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        )
+    }
+}
+export default CampoDeBusca;
+
 In the project directory, you can run:
 
 ### `npm start`
